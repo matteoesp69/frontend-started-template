@@ -10,6 +10,7 @@ const replace = require('gulp-replace');
 const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
+const { optipng } = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 
 // File path
@@ -24,7 +25,17 @@ const files = {
 // Imagemin
 function imageminTask() {
   return gulp.src(files.imagePath)
-    .pipe(imagemin())
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: true },
+          { cleanupIDs: false }
+        ]
+      })
+    ]))
     .pipe(gulp.dest('dist/img'))
     .pipe(browserSync.stream());
 }
