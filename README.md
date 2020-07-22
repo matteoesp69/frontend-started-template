@@ -12,13 +12,15 @@
   <li>Option 1. Import all of Bootstrap's script (gulp-concat)</li>
   <li>Option 2. Import just the Bootstrap's script you need</li>
   <li>Cache Control</li>
+  <li>jQuery Collapser | See assets for more styles</li>
+  <li>Font Awesome customizable</li>
 </ul>
 
 <h4>Frameworks & Libraries included</h4>
 <p>Poppersjs/core, Bootstrap, jQuery, popper.js, Responsive font size (rfs).</p>
 
 <h4>Plugins included</h4>
-<p>gulp, gulp-sass, cssnano, autoprefixer, purgecss, htmlmin, gulp-concat, gulp-uglify, gulp-source-maps, gulp-image-optimization, browser-sync.</p>
+<p>gulp, gulp-sass, cssnano, autoprefixer, purgecss, htmlmin, gulp-concat, gulp-uglify, gulp-source-maps, gulp-imagemin, browser-sync.</p>
 
 <h5>Usage</h5>
 <ul>

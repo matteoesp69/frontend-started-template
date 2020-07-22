@@ -8,7 +8,7 @@ const cssnano = require('cssnano');
 const purgecss = require('gulp-purgecss');
 const replace = require('gulp-replace');
 const htmlmin = require('gulp-htmlmin');
-const imageop = require('gulp-image-optimization');
+const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 
@@ -18,13 +18,13 @@ const files = {
   sassPath: 'app/scss/**/*.scss',
   jsPath: 'app/js/**/!(custom)*.js',
   htmlPath: 'app/**/*.html',
-  imagePath: 'app/img/**/*.jpg'
+  imagePath: 'app/img/*',
 }
 
-// Imagine Optimization
-function imageopTask() {
+// Imagemin
+function imageminTask() {
   return gulp.src(files.imagePath)
-    .pipe(imageop({ optimizationLevel: 5, progressive: true, interlance: true }))
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/img'))
     .pipe(browserSync.stream());
 }
@@ -57,6 +57,7 @@ function jsTask() {
     // Import all bootstrap 
     'node_modules/jquery/dist/jquery.js',
     'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+    'assets/jquery-collapser/src/jquery.collapser.js',
     'node_modules/popper.js/dist/umd/popper.js',
     'app/js/custom.js'
   ])
@@ -84,13 +85,13 @@ function watch() {
 
   gulp.watch('app/scss/**/*.scss', cssTask)
   gulp.watch('app/**/*.html', htmlminTask)
-  gulp.watch('app/img/**/*.jpg', imageopTask)
+  gulp.watch('app/img/*', imageminTask)
   gulp.watch('app/js/**/*.js', jsTask)
 }
 
 exports.cssTask = cssTask;
 exports.jsTask = jsTask;
-exports.imageopTask = imageopTask;
+exports.imageminTask = imageminTask;
 exports.htmlminTask = htmlminTask;
 exports.cacheBustTask = cacheBustTask;
 exports.watch = watch;
