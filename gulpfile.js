@@ -58,6 +58,7 @@ function jsTask() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
     'assets/jquery-collapser/src/jquery.collapser.js',
+    'node_modules/picturefill/dist/picturefill.js',
     'node_modules/popper.js/dist/umd/popper.js',
     'app/js/custom.js'
   ])
