@@ -14,6 +14,9 @@
   <li>Cache Control</li>
   <li>jQuery Collapser | See assets for more styles</li>
   <li>Font Awesome customizable</li>
+  <li>Picturefill library</li>
+  <li>jQuery collapser</li>
+  <li>To include html partials, use module.js, noscript in the html as fullback</li>
 </ul>
 
 <h4>Frameworks & Libraries included</h4>
@@ -27,6 +30,8 @@
   <li>Install [Node.js](https://nodejs.org/en/) You need node v.10.15.3 above</li>
   <li>Clone the repo</li>
   <li>Run `npm install` install dependencies</li>
+  <li>Run all the `gulp task` one by one in this way the libraries are loaded `go in  gulpfile.js `// Gulp tasks`</li>
+  <li>Go into the assets dir and git clone the jQuery collaper `see readme.md`</li>
   <li>Run `gulp watch` to run the default gulp task (see gulpfile.js)</li>
   <li>Cache control run before production (see links with ?id=123)
     <ul>

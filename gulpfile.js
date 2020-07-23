@@ -68,8 +68,8 @@ function jsTask() {
     // Import all bootstrap 
     'node_modules/jquery/dist/jquery.js',
     'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-    'assets/jquery-collapser/src/jquery.collapser.js',
-    'node_modules/picturefill/dist/picturefill.js',
+    // 'assets/jquery-collapser/src/jquery.collapser.js',
+    // 'node_modules/picturefill/dist/picturefill.js',
     'node_modules/popper.js/dist/umd/popper.js',
     'app/js/custom.js'
   ])
@@ -101,6 +101,7 @@ function watch() {
   gulp.watch('app/js/**/*.js', jsTask)
 }
 
+//  Gulp tasks
 exports.cssTask = cssTask;
 exports.jsTask = jsTask;
 exports.imageminTask = imageminTask;
