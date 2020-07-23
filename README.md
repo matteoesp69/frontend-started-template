@@ -15,15 +15,14 @@
   <li>jQuery Collapser | See assets for more styles</li>
   <li>Font Awesome customizable</li>
   <li>Picturefill library</li>
-  <li>jQuery collapser</li>
   <li>To include html partials, use module.js, noscript in the html as fullback</li>
 </ul>
 
 <h4>Frameworks & Libraries included</h4>
-<p>Poppersjs/core, Bootstrap, jQuery, popper.js, Responsive font size (rfs).</p>
+<p>Bootstrap, jQuery, Popper.js, Responsive font size (rfs), Font Awesome, jQuery Collapser</p>
 
 <h4>Plugins included</h4>
-<p>gulp, gulp-sass, cssnano, autoprefixer, purgecss, htmlmin, gulp-concat, gulp-uglify, gulp-source-maps, gulp-imagemin, browser-sync.</p>
+<p>gulp, gulp-sass, cssnano, gulp-postcss, autoprefixer, purgecss, htmlmin, gulp-concat, gulp-uglify, gulp-source-maps, gulp-imagemin, browser-sync</p>
 
 <h5>Usage</h5>
 <ul>
