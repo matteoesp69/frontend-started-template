@@ -1,0 +1,73 @@
+TODO:
+@high @today @critical @low @doing
+===========================================================================
+@today  
+☐  @created(20-07-23)
+
+@WF 
+☐ change the paths in gulpfile.js use variables when I can @created(20-07-24)
+===========================================================================
+@research 
+☐ Youtube WSLint short course @created(20-07-23)
+☐ Set Cookie with php `looking for files` @created(20-07-23)
+
+===========================================================================
+@problems 
+
+
+
+===========================================================================
+@todo 
+TAG MANGER: 
+GOOGLE ANALYTICS:
+DATABOX:
+
+===========================================================================
+@todo 
+GOOGLE SITE VERIFICATION  TAG:
+SEARCH CONSOLE: 
+
+===========================================================================
+@production 
+Metategs:
+ ☐ h1 tag has main title every 3 @started(20-04-16 ) @doing 
+ ☐ change the page description tag @started(20-04-16 ) @doing 
+Validation:
+ https://validator.w3.org/
+
+===========================================================================
+@production 
+Compression:
+CacheBustTask:
+HtmlTask: 
+☐ collapseWhitespace: false @high 
+
+===========================================================================
+@production 
+Network on live: 
+☐ index.html @started(20-04-16 )
+31 requests
+796 kB transferred
+1.3 MB resources
+Finish: 790 ms
+DOMContentLoaded: 374 ms
+Load: 772 ms
+=================================== 
+☐ page.html @started(20-04-16 )
+31 requests
+646 kB transferred
+1.2 MB resources
+Finish: 868 ms
+DOMContentLoaded: 286 ms
+Load: 870 ms@created(20-07-23)
+=================================== 
+☐ Sitemap  @started(20-04-16 ))
+30 requests
+357 kB transferred
+902 kB resources
+Finish: 560 ms
+DOMContentLoaded: 311 ms
+Load: 537 ms
+
+
+
