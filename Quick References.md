@@ -3,6 +3,7 @@
 ---
 
 - GIT - FASTER EXAMPLE
+- NVM
 - Toolkit API
 - Libraries
 - Plugins
@@ -32,6 +33,17 @@
   - git push origin --delete learning-github
   - git branch -a
   - git push origin master
+
+---
+
+  <h2>NVM</h2>
+  https://curl.haxx.se/download.html
+ - nvm ls 
+ - nvm -h
+ - Example:
+  - nvm use v6.0.0
+  - nvm alias default 8.1.0 
+  - nvm ls-remote
 
 ---
 
