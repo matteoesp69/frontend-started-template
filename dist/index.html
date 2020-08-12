@@ -7,6 +7,9 @@
   <title>Send Box</title>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+
+  <!-- Multi level menu -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="css/styles.css?cb=1595395368247">
   <style>
     /* Read more */
@@ -18,11 +21,38 @@
       font-weight: 500;
     }
 
+    /* Multi level dropdown menu */
+    .dropdown-submenu {
+      position: relative;
+    }
+
+    .dropdown-submenu>a:after {
+      content: "\f0da";
+      float: right;
+      border: none;
+      font-family: 'FontAwesome';
+    }
+
+    .dropdown-submenu>.dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+
+    @media (min-width: 991px) {
+      .dropdown-menu {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    }
+
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <noscript> For full functionality of this site it is necessary to enable JavaScript. <br> Here are the <a href="https://www.enablejavascript.io/"> instructions how to enable JavaScript in your web browser</a>. <br> For navigation visit the <a href="#">Site Map</a>. </noscript>
+
+  <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -38,6 +68,7 @@
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -46,6 +77,44 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </li>
+
+        <!-- Level one dropdown -->
+        <li class="nav-item dropdown">
+          <a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
+          <ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow">
+            <li><a href="#" class="dropdown-item">Some action </a></li>
+            <li><a href="#" class="dropdown-item">Some other action</a></li>
+
+            <li class="dropdown-divider"></li>
+
+            <!-- Level two dropdown-->
+            <li class="dropdown-submenu">
+              <a id="dropdownMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Hover for action</a>
+              <ul aria-labelledby="dropdownMenu2" class="dropdown-menu border-0 shadow">
+                <li>
+                  <a tabindex="-1" href="#" class="dropdown-item">level 2</a>
+                </li>
+
+                <!-- Level three dropdown-->
+                <li class="dropdown-submenu">
+                  <a id="dropdownMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
+                  <ul aria-labelledby="dropdownMenu3" class="dropdown-menu border-0 shadow">
+                    <li><a href="#" class="dropdown-item">3rd level</a></li>
+                    <li><a href="#" class="dropdown-item">3rd level</a></li>
+                  </ul>
+                </li>
+                <!-- End Level three -->
+
+                <li><a href="#" class="dropdown-item">level 2</a></li>
+                <li><a href="#" class="dropdown-item">level 2</a></li>
+              </ul>
+            </li>
+            <!-- End Level two -->
+
+          </ul>
+        </li>
+        <!-- End Level one -->
+
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -53,6 +122,7 @@
       </form>
     </div>
   </nav>
+
   <main role="main">
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -92,6 +162,30 @@
     <i class="fa fa-instagram fa-3x fa-pull-right"></i>
   </footer>
   <script src="js/all.js?cb=1595395368247"></script>
+
+  <script>
+    $(function () {
+      // ------------------------------------------------------- //
+      // Multi Level dropdowns
+      // ------------------------------------------------------ //
+      $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        $(this).siblings().toggleClass("show");
+
+
+        if (!$(this).next().hasClass('show')) {
+          $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+        }
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+          $('.dropdown-submenu .show').removeClass("show");
+        });
+
+      });
+    });
+
+  </script>
 </body>
 
 </html>

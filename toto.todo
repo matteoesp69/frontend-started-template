@@ -2,7 +2,7 @@ TODO:
 @high @today @critical @low @doing
 ===========================================================================
 @today  
-☐  @created(20-07-23)
+ ☐ https://cdnjs.cloudflare.com @created(20-08-10)
 
 @WF 
 ☐ change the paths in gulpfile.js use variables when I can @created(20-07-24)

@@ -54,9 +54,9 @@ function cssTask() {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(purgecss({
-      content: ['**/*.html']
-    }))
+    // .pipe(purgecss({
+    //   content: ['**/*.html']
+    // }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream());
