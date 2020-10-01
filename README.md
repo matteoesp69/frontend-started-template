@@ -17,6 +17,7 @@
   <li>Picturefill library</li>
   <li>To include html partials, use module.js, noscript in the html as fullback</li>
   <li>Multi level dropdown menu</li>
+  <li>testRest.http</li>
 </ul>
 
 <h4>Frameworks & Libraries included</h4>
